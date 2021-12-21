@@ -1,0 +1,196 @@
+<html>
+    <head>
+        
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./stile.css">
+        <title>sito dei ruoli</title>
+
+    </head>
+
+
+    <body>
+        <!-- prima parte -->
+        <nav class="navbar navbar-light bg-light">
+            <h1>far inc </h1>
+            <h2 class="introdutorio" id="benvenuto">Benvenuto</h2>
+            <h2 class="aceduto" id="Bentornato"> Bentornato </h2>
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button id="accesso" class="btn btn-primary btn-lg introdutorio" data-toggle="modal" data-target="#accedi">Accedi</button>
+                    <button id="registrazione"  class="btn btn-secondary introdutorio"  data-toggle="modal" data-target="#registrati">registrati</button>
+                    <button id="elimina" class="btn btn-danger btn-lg aceduto" onclick="eliminaccaunt()">Elimina</button>
+                    <button id="modifica"  class="btn btn-warning aceduto"  data-toggle="modal"  data-target="#modificam">Modifica</button>
+                    
+                </div>
+            </div>
+        </nav>
+        <div class="bg-image introdutorio" id="intro"
+        style="background-image: url('./tech.jpg');
+            height: 98vh">
+            </br>
+            <p class="mx-auto " style="width: 600px">Benvenuto al sito della far inc per poter accedere ai nostri servizi  la prego di <b class="enfasi">registrasi</b> o <b class="enfasi">accedere</b></p>
+        </div>
+        
+        <!-- parte clientela -->
+        <table class="table percliente" id="tabellacliente">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">tabella</th>
+              <th scope="col">servizio</th>
+              <th scope="col">prezzo</th>
+              <th scope="col">#</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>servizio base</td>
+              <td>10€</td>
+              <td><button class="comprare"> compra </button></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>servizio completo</td>
+              <td>15€</td>
+              <td><button class="comprare"> compra </button></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>servizio pro</td>
+              <td>20€</td>
+              <td><button class="comprare"> compra </button></td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- parte personale -->
+        <P id="testoperonale"></P>
+        <!--<div class="table perpersonale" id="tabellapersonale"> </div>
+        <table class="table perpersonale" id="tabellapersonale">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">tabella</th>
+              <th scope="col">servizio</th>
+              <th scope="col">cliente</th>
+              <th scope="col">#</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td></td>
+              <td></td>
+              <td><button class="">  </button></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td> </td>
+              <td></td>
+              <td><button class="">  </button></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td> </td>
+              <td></td>
+              <td><button class="comprare">  </button></td>
+            </tr>
+          </tbody>
+        </table>
+      -->
+        
+          
+          <!-- Modali -->
+          <div class="modal fade" id="accedi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">accedi</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" id="aceddi">
+                  <h3>iserisci le tue credenziali per accedere</h3>
+                  <form id="datiaccesso">
+                    <label for="emaila">email</label>
+                    <input type="email" id="emaila" class="form-control" >
+                    <label for="passworda">password</label>
+                    <input type="password" id="passworda" class="form-control" >
+                  
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary"  >Save changes</button>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+                                      
+          <div class="modal fade" id="registrati" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">registrati</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h3>iserisci i tuoi dati per registrarti</h3>
+                  <form id="datiregsitrazione">
+                    <label for="emailr">email</label>
+                    <input type="email" id="emailr" class="form-control" >
+                    <label for="passwordr">password</label>
+                    <input type="password" id="passwordr" class="form-control" >
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary"  >Save changes</button>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="modificam" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">registrati</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h3>iserisci i tuoi dati per registrarti</h3>
+                  <form id="datimodifica">
+                    <label for="passwordm">password</label>
+                    <input type="password" id="passwordm" class="form-control" >
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary"  >Save changes</button>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    <script src="./gestioneutenti.js"></script>    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js">
+    </script>
+    </body>
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,15 @@
+#intro{
+    color: rgba(172, 255, 47, 0.523);
+}
+.enfasi{
+    color: rgba(0, 255, 255, 0.816);
+}
+.percliente{
+    display: none;
+}
+.perpersonale{
+    display: none;
+}
+.aceduto{
+    display: none;
+}
